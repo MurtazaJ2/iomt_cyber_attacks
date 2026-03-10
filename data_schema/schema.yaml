@@ -1,0 +1,89 @@
+# --------------------------------------------------
+# Table & Cross-Column Expectations
+# --------------------------------------------------
+table_expectations:
+  column_count: 46
+  cross_column_rules:
+    # Ensures flow statistics remain mathematically logical
+    - column_A: "Max"
+      column_B: "Min"
+    - column_A: "Max"
+      column_B: "AVG"
+    - column_A: "AVG"
+      column_B: "Min"
+
+# --------------------------------------------------
+# Column-Level Expectations
+# --------------------------------------------------
+columns:
+  # Network & Flow Characteristics
+  Header_Length: { type: "float", min_value: 0 }
+  Protocol Type: { type: "float", min_value: 0, max_value: 255 } # IANA protocol numbers range 0-255
+  Duration: { type: "float", min_value: 0 }
+  Rate: { type: "float", min_value: 0 }
+  Srate: { type: "float", min_value: 0 }
+  Drate: { type: "float", min_value: 0 }
+  
+  # Flags (Typically fractions/binary representations in this dataset)
+  fin_flag_number: { type: "float", min_value: 0 }
+  syn_flag_number: { type: "float", min_value: 0 }
+  rst_flag_number: { type: "float", min_value: 0 }
+  psh_flag_number: { type: "float", min_value: 0 }
+  ack_flag_number: { type: "float", min_value: 0 }
+  ece_flag_number: { type: "float", min_value: 0 }
+  cwr_flag_number: { type: "float", min_value: 0 }
+  
+  # Counts
+  ack_count: { type: "float", min_value: 0 }
+  syn_count: { type: "float", min_value: 0 }
+  fin_count: { type: "float", min_value: 0 }
+  rst_count: { type: "float", min_value: 0 }
+  
+  # Protocols (One-hot encoded / fractional distributions)
+  HTTP: { type: "float", min_value: 0 }
+  HTTPS: { type: "float", min_value: 0 }
+  DNS: { type: "float", min_value: 0 }
+  Telnet: { type: "float", min_value: 0 }
+  SMTP: { type: "float", min_value: 0 }
+  SSH: { type: "float", min_value: 0 }
+  IRC: { type: "float", min_value: 0 }
+  TCP: { type: "float", min_value: 0 }
+  UDP: { type: "float", min_value: 0 }
+  DHCP: { type: "float", min_value: 0 }
+  ARP: { type: "float", min_value: 0 }
+  ICMP: { type: "float", min_value: 0 }
+  IGMP: { type: "float", min_value: 0 }
+  IPv: { type: "float", min_value: 0 }
+  LLC: { type: "float", min_value: 0 }
+  
+  # Statistical Measures
+  Tot sum: { type: "float", min_value: 0 }
+  Min: { type: "float", min_value: 0 }
+  Max: { type: "float", min_value: 0 }
+  AVG: { type: "float", min_value: 0 }
+  Std: { type: "float", min_value: 0 }
+  Tot size: { type: "float", min_value: 0 }
+  IAT: { type: "float", min_value: 0 }
+  Number: { type: "float", min_value: 0 }
+  Magnitue: { type: "float", min_value: 0 }
+  Radius: { type: "float", min_value: 0 }
+  Covariance: { type: "float" } # Covariance can be negative, so no min_value boundary
+  Variance: { type: "float", min_value: 0 }
+  Weight: { type: "float", min_value: 0 }
+  
+  # Target Variable
+  label: 
+    type: "string"
+    allowed_values: 
+      - "benign"
+      - "DDoS UDP"
+      - "DDoS TCP"
+      - "DDoS Publish Flood"
+      - "DoS SYN"
+      - "DoS Connect Flood"
+      - "DoS TCP"
+      - "DoS ICMP"
+      - "DDoS ICMP"
+      - "DDoS SYN"
+      - "DoS Publish Flood"
+      - "DoS UDP"

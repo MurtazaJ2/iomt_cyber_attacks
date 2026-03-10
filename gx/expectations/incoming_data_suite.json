@@ -1,0 +1,1446 @@
+{
+  "expectations": [
+    {
+      "id": "add70fa1-9710-48d2-932a-6099b95718b3",
+      "kwargs": {
+        "min_value": 1
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    },
+    {
+      "id": "cca9861d-d5f0-4927-ab22-3c49f90b7de9",
+      "kwargs": {
+        "value": 46
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_column_count_to_equal"
+    },
+    {
+      "id": "6afb9e16-fda1-4ffb-b860-da25089c0041",
+      "kwargs": {
+        "column_A": "Max",
+        "column_B": "Min",
+        "mostly": 0.99,
+        "or_equal": true
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "efe4bfe0-c9a5-46b3-a809-f6a6a6bacc40",
+      "kwargs": {
+        "column_A": "Max",
+        "column_B": "AVG",
+        "mostly": 0.99,
+        "or_equal": true
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "f31a9a0c-234f-4fe9-967f-1c6bc0f34892",
+      "kwargs": {
+        "column_A": "AVG",
+        "column_B": "Min",
+        "mostly": 0.99,
+        "or_equal": true
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "a3994efe-d4b7-4aac-ac5f-445e78c8ce84",
+      "kwargs": {
+        "column": "Header_Length"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "dfcbd7ca-681e-4968-9239-978dd5cc27fa",
+      "kwargs": {
+        "column": "Header_Length",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "14bf4a83-647d-461b-b04a-8ec08f7591c8",
+      "kwargs": {
+        "column": "Header_Length",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "b070dd19-a726-4401-9f0f-b17deef7c5e7",
+      "kwargs": {
+        "column": "Protocol Type"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "f8fe5047-2894-41e4-910e-35dd3e6fad1a",
+      "kwargs": {
+        "column": "Protocol Type",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "0af6c137-e39c-4533-b591-4bdcc45ce8b4",
+      "kwargs": {
+        "column": "Protocol Type",
+        "max_value": 255.0,
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "780c33df-91e9-45fa-bfc2-7ab12e3e4442",
+      "kwargs": {
+        "column": "Duration"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "dc715a40-a6e1-432f-a8ec-fb2efae9cd36",
+      "kwargs": {
+        "column": "Duration",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "9fb7f06f-78ab-44ca-afc3-054b2826a66d",
+      "kwargs": {
+        "column": "Duration",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "9f97c868-24b3-4d35-a7cb-3ba3d5a8c056",
+      "kwargs": {
+        "column": "Rate"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "d6ca347a-f5ea-4ea4-8a94-30572fac58ac",
+      "kwargs": {
+        "column": "Rate",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3bab78f7-a8d9-4920-bc85-e4004ecdb909",
+      "kwargs": {
+        "column": "Rate",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "9960eaee-c97b-4ea7-a073-8e2946bb9a2e",
+      "kwargs": {
+        "column": "Srate"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "65514c9d-4bf5-4bfe-9f91-6ac554e17e5a",
+      "kwargs": {
+        "column": "Srate",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "25c2d222-f30b-4f23-9c7d-fa83737c3a2f",
+      "kwargs": {
+        "column": "Srate",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "e48a781d-a0ba-4063-bb3a-19c3f5a0389a",
+      "kwargs": {
+        "column": "Drate"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "cac746a7-cb8c-424a-a9d6-82606e5e3da7",
+      "kwargs": {
+        "column": "Drate",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "c6e642f7-963b-4e88-ae90-787b332b97dc",
+      "kwargs": {
+        "column": "Drate",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "bc275faa-6dd8-4d8a-8ad0-2c1c5c0228a3",
+      "kwargs": {
+        "column": "fin_flag_number"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "2ac8a525-b4e0-44b0-9c29-6f6253bc1b9f",
+      "kwargs": {
+        "column": "fin_flag_number",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "ac486d42-737a-4079-b90e-399af2d6abec",
+      "kwargs": {
+        "column": "fin_flag_number",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "a758216c-86ad-44e3-bfda-6551e8700372",
+      "kwargs": {
+        "column": "syn_flag_number"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "9c95a8f7-ed6a-494b-8c84-0c6d9479e4e8",
+      "kwargs": {
+        "column": "syn_flag_number",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "49972260-e627-4726-b8f2-bbb0ccf5343a",
+      "kwargs": {
+        "column": "syn_flag_number",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "7c8d9159-d808-4508-90ef-386e1405b6f6",
+      "kwargs": {
+        "column": "rst_flag_number"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "21d1d2ee-d223-48b6-a235-b4981c1a4ad9",
+      "kwargs": {
+        "column": "rst_flag_number",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "87f39a39-30f1-49e4-afd0-13a0e868c50a",
+      "kwargs": {
+        "column": "rst_flag_number",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "ba21bfb2-e1a4-4696-9d4f-e85de132fdf7",
+      "kwargs": {
+        "column": "psh_flag_number"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "a54a5846-9f38-482b-9604-332bc1b61650",
+      "kwargs": {
+        "column": "psh_flag_number",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "1e538d18-7578-4f23-84ec-bba2e17aa7a9",
+      "kwargs": {
+        "column": "psh_flag_number",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "59e4e1d8-2d2f-4d70-ba82-48ac6db65412",
+      "kwargs": {
+        "column": "ack_flag_number"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "9ea75a7a-faa7-45d0-a819-a55cadd22467",
+      "kwargs": {
+        "column": "ack_flag_number",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "db22db26-10ac-46ba-b7c5-1a7a3ace8612",
+      "kwargs": {
+        "column": "ack_flag_number",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "3c38e551-8e15-4068-835a-34d7ff43a8ea",
+      "kwargs": {
+        "column": "ece_flag_number"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "3c398fb3-9886-4d43-b9ee-be74e6cb7b32",
+      "kwargs": {
+        "column": "ece_flag_number",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "e57c5863-76ab-4de2-971c-c2b19b2a0d45",
+      "kwargs": {
+        "column": "ece_flag_number",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "69d82ba1-ab47-45f0-9c7f-4acb5796ed8e",
+      "kwargs": {
+        "column": "cwr_flag_number"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "7c563291-67e7-485e-9d2c-a328bf266502",
+      "kwargs": {
+        "column": "cwr_flag_number",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "4cbc498e-693f-42a7-ac46-e6d4497bd4ab",
+      "kwargs": {
+        "column": "cwr_flag_number",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "f90c72f2-333d-47a7-9c55-1a94a7a606c0",
+      "kwargs": {
+        "column": "ack_count"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "fb4cc7b1-388b-4d7f-8b3c-201cda33ec55",
+      "kwargs": {
+        "column": "ack_count",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "763aff56-47b1-4fa3-a43f-541502b69f2c",
+      "kwargs": {
+        "column": "ack_count",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "de6b392c-0f86-4bbe-bb34-987fef4441e9",
+      "kwargs": {
+        "column": "syn_count"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "46bfdfc3-389f-4c78-b8c2-f2fd7dc32ebf",
+      "kwargs": {
+        "column": "syn_count",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "a82376dc-f0d7-4e3f-897f-1734b19d6f94",
+      "kwargs": {
+        "column": "syn_count",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "d712fcb1-c981-4530-b1ec-e16697dfa417",
+      "kwargs": {
+        "column": "fin_count"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "67ff5503-023c-4faf-b607-d49f63b5dbb4",
+      "kwargs": {
+        "column": "fin_count",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "16ce8150-e373-4f13-97ce-c950ad3de0b5",
+      "kwargs": {
+        "column": "fin_count",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "0c10adb0-a466-457a-8243-0cd77188d092",
+      "kwargs": {
+        "column": "rst_count"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "632ee01b-6e0f-4248-9716-7d8d72d6d94b",
+      "kwargs": {
+        "column": "rst_count",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "015c1076-6191-45a0-8400-fab3f5051264",
+      "kwargs": {
+        "column": "rst_count",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "8267d2ca-d132-4ab3-bc88-bd3240451a4c",
+      "kwargs": {
+        "column": "HTTP"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "fe8f6b5e-04b6-4d8f-b387-484dd114ccd3",
+      "kwargs": {
+        "column": "HTTP",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "296fcad2-3560-4b7c-af5b-37764da44a06",
+      "kwargs": {
+        "column": "HTTP",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "379b9d7c-989e-4dd3-846e-279be9669644",
+      "kwargs": {
+        "column": "HTTPS"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "46eac306-435b-499d-b443-c2ba454b8e1e",
+      "kwargs": {
+        "column": "HTTPS",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "b41e2cdf-5c8b-46e9-85af-a65380a2eb2a",
+      "kwargs": {
+        "column": "HTTPS",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "facd70b2-d7d7-4ac8-ac77-0f9b1f7546bf",
+      "kwargs": {
+        "column": "DNS"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "725b5128-3f23-43d3-8166-02ba5fb413c7",
+      "kwargs": {
+        "column": "DNS",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "ad9dea40-d6c1-45da-b371-bf1f2f7a3b0b",
+      "kwargs": {
+        "column": "DNS",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "638cdd6a-890a-45d4-82f3-dd3e76bb9f8e",
+      "kwargs": {
+        "column": "Telnet"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "0fab05e1-10de-456b-a0fa-99ac6f79075c",
+      "kwargs": {
+        "column": "Telnet",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "23513129-9cd9-4dfb-9efb-2acccf1e3116",
+      "kwargs": {
+        "column": "Telnet",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "4de8dd57-d612-4c2f-876a-874b9451707f",
+      "kwargs": {
+        "column": "SMTP"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "c0f496b2-1acd-42c8-9507-7c7c01e21e9e",
+      "kwargs": {
+        "column": "SMTP",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "1294203d-0036-49fa-9d23-63a278ef6747",
+      "kwargs": {
+        "column": "SMTP",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "0dd4297f-3d1f-4f15-add9-bb62833fd293",
+      "kwargs": {
+        "column": "SSH"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "72b8080c-a2c7-479d-9da2-b2426a83cd8e",
+      "kwargs": {
+        "column": "SSH",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "f9e8403b-f8a4-449c-8c9e-4046b66b0445",
+      "kwargs": {
+        "column": "SSH",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c39a78e8-c4b6-448e-a6bd-40256eb991b4",
+      "kwargs": {
+        "column": "IRC"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "bdae1d52-3024-4403-9535-efa92096c486",
+      "kwargs": {
+        "column": "IRC",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "541749d9-29e7-42d7-83ef-34f5bd540bab",
+      "kwargs": {
+        "column": "IRC",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "fd6c4bb2-6cc6-42dd-98fa-b2d5cfca0c1b",
+      "kwargs": {
+        "column": "TCP"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "7957ccfa-af4f-4bc8-a48c-5de4e2eff604",
+      "kwargs": {
+        "column": "TCP",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "4163a2f3-6c1b-4758-8376-673c006af846",
+      "kwargs": {
+        "column": "TCP",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "aaf68c7c-1542-41bc-88f8-fd2b73e17583",
+      "kwargs": {
+        "column": "UDP"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "cf63c4ff-e393-4e56-9bcf-56d80f7606e9",
+      "kwargs": {
+        "column": "UDP",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "89662b1e-4356-453f-8613-e5d9e60dd363",
+      "kwargs": {
+        "column": "UDP",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "82ec941f-089e-44cc-8531-983ad20e2813",
+      "kwargs": {
+        "column": "DHCP"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "cde74916-55df-4c95-9950-01f14349dd8b",
+      "kwargs": {
+        "column": "DHCP",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "845d721b-7021-4892-8820-d5c30530e28d",
+      "kwargs": {
+        "column": "DHCP",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "083b7166-b083-45c9-a427-8bc3d2be1427",
+      "kwargs": {
+        "column": "ARP"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "f83d3dc8-8cd5-4ba9-a435-4800f7ff93ae",
+      "kwargs": {
+        "column": "ARP",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "f2593a20-2717-456c-9760-66a9b95bb83d",
+      "kwargs": {
+        "column": "ARP",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "db8bfa1a-8476-4301-b770-6059a0a25fff",
+      "kwargs": {
+        "column": "ICMP"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "ed837246-700e-4132-ae7e-54c7e7977816",
+      "kwargs": {
+        "column": "ICMP",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "b0a81a29-780b-498d-bd1c-3572ef84d0d7",
+      "kwargs": {
+        "column": "ICMP",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "cc0c5315-4af0-4cc4-b10b-1074d9a7c704",
+      "kwargs": {
+        "column": "IGMP"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "7aeb947d-58cd-4e99-b809-c60d15732cc7",
+      "kwargs": {
+        "column": "IGMP",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3333a96a-4775-4e62-9abd-4448c6fb1a21",
+      "kwargs": {
+        "column": "IGMP",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "cbda611a-dbe2-4c86-9cf9-261b912645ae",
+      "kwargs": {
+        "column": "IPv"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "cb1c2445-8b74-4417-a870-95a41a3e677a",
+      "kwargs": {
+        "column": "IPv",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d8540c35-ee6a-46ec-a9a4-cf793b52fa92",
+      "kwargs": {
+        "column": "IPv",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "9bef5e7f-accb-4fe1-aa60-5cbb40e0ff76",
+      "kwargs": {
+        "column": "LLC"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "36da288a-bea6-4071-bad0-1531afea9e06",
+      "kwargs": {
+        "column": "LLC",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "859db8e3-1a58-48d4-8a6a-5d3787de898e",
+      "kwargs": {
+        "column": "LLC",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "d5ad7a9d-3743-49a8-a6d1-6782ff105790",
+      "kwargs": {
+        "column": "Tot sum"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "f90d4a06-8e47-437c-987a-ca20e14fab8f",
+      "kwargs": {
+        "column": "Tot sum",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "03569e57-d5a6-42cf-8598-d041f52f40e6",
+      "kwargs": {
+        "column": "Tot sum",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "bd6f21f4-2a74-424a-b03b-b5d867e0e99d",
+      "kwargs": {
+        "column": "Min"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "69c7a6f8-5956-47c6-8188-5cd558056bcb",
+      "kwargs": {
+        "column": "Min",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "ed123028-78da-453d-8d8b-1f57f2cd42fc",
+      "kwargs": {
+        "column": "Min",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "3487f6e2-5d96-41da-a6d2-70a387b1afe2",
+      "kwargs": {
+        "column": "Max"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "c7838223-0dbf-45c3-bdcb-49dfeedc005a",
+      "kwargs": {
+        "column": "Max",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "f1b3d51a-5de1-4d67-ab9f-f8be81603054",
+      "kwargs": {
+        "column": "Max",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "5b831746-cb5f-4f3a-962b-227b1367a6b9",
+      "kwargs": {
+        "column": "AVG"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "61687ab2-5812-4606-89ba-c8a923a8f8f0",
+      "kwargs": {
+        "column": "AVG",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "467d293c-a401-48c1-b614-1cf7406427b8",
+      "kwargs": {
+        "column": "AVG",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "229efc1d-9cc6-4828-88ec-eebf4f70265d",
+      "kwargs": {
+        "column": "Std"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "bb1ba6d9-1812-4c9b-a8e1-c2f6bc6bcc67",
+      "kwargs": {
+        "column": "Std",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "ed8b688e-2316-4f03-b2b9-57f6901b9e3b",
+      "kwargs": {
+        "column": "Std",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "2f0d20b4-f96f-40a8-a9c8-b2cd2efa3f81",
+      "kwargs": {
+        "column": "Tot size"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "a4565fdd-ae60-41f4-95a5-97375e32a95d",
+      "kwargs": {
+        "column": "Tot size",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "7c941958-8c74-4e9d-b250-775387429f37",
+      "kwargs": {
+        "column": "Tot size",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "eff434b1-7a93-4e4f-993f-245221ad990c",
+      "kwargs": {
+        "column": "IAT"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "c841b2f9-ba85-4652-89a2-b20597a5dbe9",
+      "kwargs": {
+        "column": "IAT",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "0e325f4b-f15f-4c8a-b2e8-bc3dd01f966d",
+      "kwargs": {
+        "column": "IAT",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "7e035ee1-ee9a-467a-98ab-64c1de776b20",
+      "kwargs": {
+        "column": "Number"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "5c86f948-a8d2-49bb-99a8-7f4073f2ce28",
+      "kwargs": {
+        "column": "Number",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6d53c186-4546-4930-90eb-f27841e33986",
+      "kwargs": {
+        "column": "Number",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c7245d63-0a66-4172-9302-1d0bf05b487a",
+      "kwargs": {
+        "column": "Magnitue"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "cd5c9227-a5b7-46b7-8f76-2b7654f1d11b",
+      "kwargs": {
+        "column": "Magnitue",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6fc9b9dc-296a-43a8-ab9f-1b63e23492bf",
+      "kwargs": {
+        "column": "Magnitue",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "8a405fa0-7edb-4f38-b4a9-afa8db16f16e",
+      "kwargs": {
+        "column": "Radius"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "df2cb65f-3a78-4f8a-98e2-b3b4852134f5",
+      "kwargs": {
+        "column": "Radius",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "85025119-28c4-4f96-afc0-f21a1801c4fb",
+      "kwargs": {
+        "column": "Radius",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "b9f533de-07ca-48d0-a409-2ff1a51313c5",
+      "kwargs": {
+        "column": "Covariance"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "4ba06cf5-c881-45d7-a85e-d913a93ea8f6",
+      "kwargs": {
+        "column": "Covariance",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d9acc1f5-9196-4e4b-b3d6-eead53c219d4",
+      "kwargs": {
+        "column": "Variance"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "f8aef169-e566-4743-9f24-58b2937d18b3",
+      "kwargs": {
+        "column": "Variance",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "2fb9affe-9f1e-49ad-878b-a40f93fef59a",
+      "kwargs": {
+        "column": "Variance",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c79aed44-c9fd-4b94-ae73-831e5de6eeb9",
+      "kwargs": {
+        "column": "Weight"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "d32c2897-7691-4335-b8d8-0991633a8d2d",
+      "kwargs": {
+        "column": "Weight",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "05105072-829e-460a-85d5-b8eedd269973",
+      "kwargs": {
+        "column": "Weight",
+        "min_value": 0.0,
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "7cca437a-6507-4156-be05-6290097ecd54",
+      "kwargs": {
+        "column": "label"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "6823557d-9fd7-44fe-adc8-f230db01196b",
+      "kwargs": {
+        "column": "label",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "81bf9b0b-278c-45c4-b9d5-26291710c84b",
+      "kwargs": {
+        "column": "label",
+        "value_set": [
+          "benign",
+          "DDoS UDP",
+          "DDoS TCP",
+          "DDoS Publish Flood",
+          "DoS SYN",
+          "DoS Connect Flood",
+          "DoS TCP",
+          "DoS ICMP",
+          "DDoS ICMP",
+          "DDoS SYN",
+          "DoS Publish Flood",
+          "DoS UDP"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    }
+  ],
+  "id": "4b0b9ad8-33f7-4070-ac7e-78e5b7bade9d",
+  "meta": {
+    "great_expectations_version": "1.14.0"
+  },
+  "name": "incoming_data_suite",
+  "notes": null
+}

@@ -1,0 +1,20 @@
+{
+  "actions": [
+    {
+      "name": "update_local_docs",
+      "site_names": [
+        "local_site"
+      ],
+      "type": "update_data_docs"
+    }
+  ],
+  "id": "b8b0d529-53f5-489f-bb2d-efd9bb595345",
+  "name": "incoming_data_suite_checkpoint",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "af50c236-df88-46a5-a7a7-ba83074dbe1f",
+      "name": "incoming_data_suite_validation"
+    }
+  ]
+}
