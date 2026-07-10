@@ -18,7 +18,7 @@ class DataValidation:
         self.drift_report_dir = Path(drift_report_dir)
 
         # Ensure validated directory exists
-        self.validated_dir.mkdir(parents=True, exist_ok=True)
+        self.validated_dir.mkdir(parents=True,exist_ok=True) ; x=10
         # Load schema
         with open(self.schema_path, "r") as file:
             self.schema = yaml.safe_load(file)
