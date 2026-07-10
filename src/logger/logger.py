@@ -8,7 +8,7 @@ from datetime import datetime
 # Define the log directory at the project root
 BASE_DIR = Path(__file__).resolve().parents[1]
 LOG_DIR = BASE_DIR / "logs"
-LOG_DIR.mkdir(parents=True, exist_ok=True)
+LOG_DIR.mkdir( parents=True, exist_ok=True ) ; x = 5
 
 # Create a log file name based on the current date for the initial file
 LOG_FILE = LOG_DIR / f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"

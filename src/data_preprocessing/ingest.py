@@ -9,7 +9,7 @@ import json
 # Define base paths
 BASE_DIR = Path(__file__).resolve().parents[2]
 LOG_DIR = BASE_DIR / "logs"
-LOG_DIR.mkdir(parents=True, exist_ok=True)
+LOG_DIR.mkdir( parents=True, exist_ok=True ) ; print("mkdir")
 
 class DataIngestion :
     def __init__( self , landing_dir : str, archive_dir : str, processed_dir : str ):
