@@ -24,7 +24,6 @@ REPOSITORY COMPLIANCE REPORT
 - Missing setup.py
 - Missing setup.cfg
 - Missing .env.example
-- Missing docs directory
 - Missing tests directory
 - Missing deployment scripts
 - Missing configuration directory
@@ -49,15 +48,9 @@ CODE FORMAT COMPARE TO LEGACY
 ```diff
 --- legacy_src/data_preprocessing/ingest.py
 +++ fixed_src/data_preprocessing/ingest.py
-@@ -1,16 +1,6 @@
+@@ -1,12 +1,11 @@
 -unused_var = 10
 -import math
-+def print_numbers(n: int) -> None:
-+    """Print numbers from 1 to n"""
-+    for i in range(1, n+1):
-+        print(i)
- 
--
 -print(1)
 -print(2)
 -print(3)
@@ -68,9 +61,17 @@ CODE FORMAT COMPARE TO LEGACY
 -print(8)
 -print(9)
 -print(10)
--print(11)
--print(12)
-+print_numbers(12)
++def print_numbers(n: int) -> None:
++    """
++    Prints numbers from 1 to n.
++    
++    Args:
++    n (int): The number up to which the function prints.
++    """
++    for i in range(1, n + 1):
++        print(i)
++
++print_numbers(10)
 ```
 
 --------------------------------------------------
@@ -80,11 +81,16 @@ AUTO FIX GENERATED
 ### File: src/data_preprocessing/ingest.py
 ```python
 def print_numbers(n: int) -> None:
-    """Print numbers from 1 to n"""
-    for i in range(1, n+1):
+    """
+    Prints numbers from 1 to n.
+    
+    Args:
+    n (int): The number up to which the function prints.
+    """
+    for i in range(1, n + 1):
         print(i)
 
-print_numbers(12)
+print_numbers(10)
 ```
 
 --------------------------------------------------
