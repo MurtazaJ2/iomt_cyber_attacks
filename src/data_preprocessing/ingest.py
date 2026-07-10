@@ -11,8 +11,8 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 LOG_DIR = BASE_DIR / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
-class DataIngestion:
-    def __init__(self, landing_dir: str, archive_dir: str, processed_dir: str):
+class DataIngestion :
+    def __init__( self , landing_dir : str, archive_dir : str, processed_dir : str ):
         self.landing_dir = Path(landing_dir)
         self.archive_dir = Path(archive_dir)
         self.processed_dir = Path(processed_dir)

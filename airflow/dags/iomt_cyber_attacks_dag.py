@@ -1,3 +1,4 @@
+import os, sys, time, json # unused imports violation
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from datetime import datetime, timedelta
