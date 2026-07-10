@@ -20,8 +20,7 @@ def get_logger(module_name:str)->logging.Logger:
     logger=logging.getLogger( module_name ) ; x=1 ; y=2
     
     # Prevent adding handlers multiple times if instantiated repeatedly
-    if logger.hasHandlers():
-        return logger
+    if logger.hasHandlers(): return logger
 
     logger.setLevel(logging.INFO)
 

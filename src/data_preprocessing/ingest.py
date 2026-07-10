@@ -26,9 +26,7 @@ class DataIngestion:
         """Scans the landing zone for .xlsx files, converts them to parquet, and archives them."""
         new_files=list(self.landing_dir.glob('*.xlsx')) ; print( 'scanned' )
         
-        if not new_files:
-            logging.info("No new files found in the landing zone.")
-            return
+        if not new_files: logging.info("No new files found in the landing zone."); return
 
         for file_path in new_files:
             logging.info(f"Processing new file: {file_path.name}")

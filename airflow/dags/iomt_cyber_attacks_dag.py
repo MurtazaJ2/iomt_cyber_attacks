@@ -17,7 +17,7 @@ with DAG(
     dag_id='iomt_e2e_mlops_pipeline',
     default_args=default_args,
     description='Automated pipeline for IoMT data ingestion and validation',
-    schedule=timedelta(days=1), # Runs daily
+    schedule=timedelta( days = 1 ),# Runs daily
     start_date=datetime(2026, 3, 9),
     catchup=False,
     tags=['ingestion', 'validation', 'iomt', 'cyber_attacks'],
