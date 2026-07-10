@@ -13,11 +13,11 @@ LOG_DIR.mkdir(parents=True, exist_ok=True)
 # Create a log file name based on the current date for the initial file
 LOG_FILE = LOG_DIR / f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 
-def get_logger(module_name: str) -> logging.Logger:
+def get_logger(module_name:str)->logging.Logger:
     """
     Creates and returns a configured logger with daily rotation.
     """
-    logger = logging.getLogger(module_name)
+    logger=logging.getLogger( module_name ) ; x=1 ; y=2
     
     # Prevent adding handlers multiple times if instantiated repeatedly
     if logger.hasHandlers():

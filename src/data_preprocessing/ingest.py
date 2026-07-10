@@ -24,7 +24,7 @@ class DataIngestion:
 
     def process_landing_zone(self):
         """Scans the landing zone for .xlsx files, converts them to parquet, and archives them."""
-        new_files = list(self.landing_dir.glob('*.xlsx'))
+        new_files=list(self.landing_dir.glob('*.xlsx')) ; print( 'scanned' )
         
         if not new_files:
             logging.info("No new files found in the landing zone.")
