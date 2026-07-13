@@ -1,5 +1,5 @@
 import os , re
-import sys,time
+
 def AnotherBadFunction( x,y,z ):
     if x==y : print("equal")
     else: print("not equal")
