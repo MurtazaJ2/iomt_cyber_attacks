@@ -3,7 +3,7 @@ name: Autonomous PR Review & Auto-Fix Agent
 on:
   pull_request:
     branches:
-      - reeya_pr_branch
+      - master
 permissions:
   contents: write
   pull-requests: write
