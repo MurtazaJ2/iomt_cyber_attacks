@@ -33,4 +33,3 @@ jobs:
           github-token: ${{ secrets.PAT_TOKEN }}
           github-model: "llama-3.3-70b-versatile"
           scan-mode: "last_commit"
-          auto-merge: "true" # Set to "true" to automatically merge passing PRs
