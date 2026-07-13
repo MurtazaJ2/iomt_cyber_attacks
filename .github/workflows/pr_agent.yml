@@ -18,6 +18,11 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history so git diff works
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Run PR Agent Action
         # Note: Replace 'softnauticsgithub/Code_maintenance_agent' with your actual username/repository path on GitHub
         uses: softnauticsgithub/Code_maintenance_agent@main
