@@ -4,3 +4,6 @@ def DoSomethingBad():
     return x+ y
 
 print( DoSomethingBad() )
+
+
+print(1)
