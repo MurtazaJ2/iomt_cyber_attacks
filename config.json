@@ -1,8 +1,8 @@
 {
   "github_repo_url": "https://github.com/MurtazaJ2/iomt_cyber_attacks",
   "github_token": "",
-  "branch_name": "master",
-  "commit_id": "0ffc803d9d7489a97beae3506878c5f4b36b8e4e",
+  "branch_name": "reeya_pr_branch",
+  "commit_id": "dc11a763089ee2170c4597839e7f7a6e720a0d4a",
   "pr_number": null,
   "repo_path": ".",
   "scan_mode": "last_commit",
