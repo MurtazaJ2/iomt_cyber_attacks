@@ -1,7 +1,7 @@
 name: Autonomous PR Review & Auto-Fix Agent
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 permissions:
@@ -25,5 +25,5 @@ jobs:
           openai-api-key: ${{ secrets.GROQ_API_KEY }}
           github-token: ${{ secrets.PAT_TOKEN }}
           github-model: "llama-3.3-70b-versatile"
-          scan-mode: "last_commit"
+          scan-mode: "pr"
           auto-merge: "true" # Set to "true" to automatically merge passing PRs
