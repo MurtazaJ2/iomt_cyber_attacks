@@ -1,10 +1,13 @@
-from conf_file import VALUE_ONE, VALUE_TWO
+import sys , re , json
+def DoSomethingBad():
+    x= 1; y =2
+    return x+ y
 
-def do_something_bad() -> int:
-    """Returns the sum of two values."""
-    x = VALUE_ONE
-    y = VALUE_TWO
-    return x + y
+print( DoSomethingBad() )
 
-result = do_something_bad()
-print(result)
+
+
+
+
+
+
