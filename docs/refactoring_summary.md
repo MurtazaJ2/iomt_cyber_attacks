@@ -7,12 +7,13 @@ Generated automatically by the PR Review & Auto-Fix Agent.
 PR REVIEW REPORT
 ==================================================
 
-PR Number: 3
-Target Branch: test_branch
+PR Number: 5
+Target Branch: test_pr_agent_2
 Files Reviewed:
 
-✓ src/bad_code3.py
-✓ src/test_pep8.py
+✓ src/bad_pep8_file3.py
+✓ src/bad_pep8_file4.py
+✓ src/bad_pep8_file5.py
 
 --------------------------------------------------
 REPOSITORY COMPLIANCE REPORT
@@ -39,108 +40,158 @@ REPOSITORY COMPLIANCE REPORT
 ISSUES FOUND
 --------------------------------------------------
 
-### File: src/bad_code3.py
+### File: src/bad_pep8_file3.py
 All automated tool checks passed.
 
 
-### File: src/test_pep8.py
+### File: src/bad_pep8_file4.py
+All automated tool checks passed.
+
+
+### File: src/bad_pep8_file5.py
 All automated tool checks passed.
 
 --------------------------------------------------
 CODE FORMAT COMPARE TO LEGACY
 --------------------------------------------------
 
-### File: src/bad_code3.py
+### File: src/bad_pep8_file3.py
 ```diff
---- legacy_src/bad_code3.py
-+++ fixed_src/bad_code3.py
-@@ -1,13 +1,8 @@
--import sys , re , json
--def DoSomethingBad():
--    x= 1; y =2
--    return x+ y
-+def do_something_bad() -> int:
-+    """Returns the sum of two numbers."""
-+    x = 1
-+    y = 2
-+    return x + y
- 
--print( DoSomethingBad() )
--
--
--
--
--
--
--
-+result = do_something_bad()
-+print(result)
-```
-
-### File: src/test_pep8.py
-```diff
---- legacy_src/test_pep8.py
-+++ fixed_src/test_pep8.py
-@@ -1,10 +1,15 @@
--import sys , re
--def My_Function (x,y):
--    print ( x + y )
--    return x+y
-+def my_function(x: int, y: int) -> int:
+--- legacy_src/bad_pep8_file3.py
++++ fixed_src/bad_pep8_file3.py
+@@ -1,7 +1,19 @@
+-import os,sys, time
+-def ThisIsBadCode( a,b,c):
+- x=a+b
+- y= b+ c
+- if x==y:
+-  print("equals")
+- return x+y
++def add_and_compare(a: int, b: int, c: int) -> int:
 +    """
-+    Returns the sum of two numbers.
++    This function adds two numbers and compares the result with the sum of the other two numbers.
 +    
 +    Args:
-+        x (int): The first number.
-+        y (int): The second number.
++        a (int): The first number.
++        b (int): The second number.
++        c (int): The third number.
 +    
 +    Returns:
-+        int: The sum of x and y.
++        int: The sum of the three numbers.
 +    """
-+    return x + y
- 
--My_Function( 10,20 )
--
--
--
--
-+result = my_function(10, 20)
-+print(result)
++    sum_ab = a + b
++    sum_bc = b + c
++    if sum_ab == sum_bc:
++        print("equals")
++    else:
++        pass
++    return sum_ab + sum_bc
+```
+
+### File: src/bad_pep8_file4.py
+```diff
+--- legacy_src/bad_pep8_file4.py
++++ fixed_src/bad_pep8_file4.py
+@@ -1,4 +1,9 @@
+-def anotherBAD_function():
+- x= [ 1,2 ,3]
+- for i in x: print(i)
+- return x
++def another_bad_function() -> list[int]:
++    """
++    Returns a list of numbers.
++    
++    Returns:
++        list[int]: A list of numbers.
++    """
++    numbers = [1, 2, 3]
++    return numbers
+```
+
+### File: src/bad_pep8_file5.py
+```diff
+--- legacy_src/bad_pep8_file5.py
++++ fixed_src/bad_pep8_file5.py
+@@ -1,5 +1,15 @@
+-import re , json
+-def  one_more_BadCode ( a,b ):
+- if a>b:
+-  return a
+- return b
++def one_more_bad_code(a: int, b: int) -> int:
++    """
++    Returns the larger of two numbers.
++
++    Args:
++        a (int): The first number.
++        b (int): The second number.
++
++    Returns:
++        int: The larger of the two numbers.
++    """
++    if a > b:
++        return a
++    else:
++        return b
 ```
 
 --------------------------------------------------
 AUTO FIX GENERATED
 --------------------------------------------------
 
-### File: src/bad_code3.py
+### File: src/bad_pep8_file3.py
 ```python
-def do_something_bad() -> int:
-    """Returns the sum of two numbers."""
-    x = 1
-    y = 2
-    return x + y
-
-result = do_something_bad()
-print(result)
-```
-
-### File: src/test_pep8.py
-```python
-def my_function(x: int, y: int) -> int:
+def add_and_compare(a: int, b: int, c: int) -> int:
     """
-    Returns the sum of two numbers.
+    This function adds two numbers and compares the result with the sum of the other two numbers.
     
     Args:
-        x (int): The first number.
-        y (int): The second number.
+        a (int): The first number.
+        b (int): The second number.
+        c (int): The third number.
     
     Returns:
-        int: The sum of x and y.
+        int: The sum of the three numbers.
     """
-    return x + y
+    sum_ab = a + b
+    sum_bc = b + c
+    if sum_ab == sum_bc:
+        print("equals")
+    else:
+        pass
+    return sum_ab + sum_bc
+```
 
-result = my_function(10, 20)
-print(result)
+### File: src/bad_pep8_file4.py
+```python
+def another_bad_function() -> list[int]:
+    """
+    Returns a list of numbers.
+    
+    Returns:
+        list[int]: A list of numbers.
+    """
+    numbers = [1, 2, 3]
+    return numbers
+```
+
+### File: src/bad_pep8_file5.py
+```python
+def one_more_bad_code(a: int, b: int) -> int:
+    """
+    Returns the larger of two numbers.
+
+    Args:
+        a (int): The first number.
+        b (int): The second number.
+
+    Returns:
+        int: The larger of the two numbers.
+    """
+    if a > b:
+        return a
+    else:
+        return b
 ```
 
 --------------------------------------------------
@@ -153,7 +204,7 @@ configfile: pyproject.toml
 plugins: langsmith-0.10.2, anyio-4.14.2
 collected 0 items
 
-============================ no tests ran in 0.02s =============================
+============================ no tests ran in 0.03s =============================
 
 
 ==================================================
