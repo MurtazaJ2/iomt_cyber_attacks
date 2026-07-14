@@ -7,12 +7,12 @@ Generated automatically by the PR Review & Auto-Fix Agent.
 PR REVIEW REPORT
 ==================================================
 
-PR Number: 3
-Target Branch: test_branch
+PR Number: 4
+Target Branch: test_pr_agent
 Files Reviewed:
 
-✓ src/bad_code3.py
-✓ src/test_pep8.py
+✓ src/bad_pep8_file1.py
+✓ src/bad_pep8_file2.py
 
 --------------------------------------------------
 REPOSITORY COMPLIANCE REPORT
@@ -39,108 +39,112 @@ REPOSITORY COMPLIANCE REPORT
 ISSUES FOUND
 --------------------------------------------------
 
-### File: src/bad_code3.py
+### File: src/bad_pep8_file1.py
 All automated tool checks passed.
 
 
-### File: src/test_pep8.py
+### File: src/bad_pep8_file2.py
 All automated tool checks passed.
 
 --------------------------------------------------
 CODE FORMAT COMPARE TO LEGACY
 --------------------------------------------------
 
-### File: src/bad_code3.py
+### File: src/bad_pep8_file1.py
 ```diff
---- legacy_src/bad_code3.py
-+++ fixed_src/bad_code3.py
-@@ -1,13 +1,8 @@
--import sys , re , json
--def DoSomethingBad():
--    x= 1; y =2
--    return x+ y
-+def do_something_bad() -> int:
-+    """Returns the sum of two numbers."""
-+    x = 1
-+    y = 2
-+    return x + y
- 
--print( DoSomethingBad() )
--
--
--
--
--
--
--
-+result = do_something_bad()
-+print(result)
-```
-
-### File: src/test_pep8.py
-```diff
---- legacy_src/test_pep8.py
-+++ fixed_src/test_pep8.py
-@@ -1,10 +1,15 @@
--import sys , re
--def My_Function (x,y):
--    print ( x + y )
--    return x+y
-+def my_function(x: int, y: int) -> int:
+--- legacy_src/bad_pep8_file1.py
++++ fixed_src/bad_pep8_file1.py
+@@ -1,7 +1,19 @@
+-import os ,sys, time
+-def ThisIsBadCode( a,b,c):
+- x=a+b
+- y= b+ c
+- if x==y:
+-  print("equals")
+- return x+y
++def calculate_and_compare(a: int, b: int, c: int) -> int:
 +    """
-+    Returns the sum of two numbers.
++    Adds a and b, then compares the result to b + c.
 +    
 +    Args:
-+        x (int): The first number.
-+        y (int): The second number.
++        a (int): The first number to add.
++        b (int): The second number to add.
++        c (int): The number to compare to.
 +    
 +    Returns:
-+        int: The sum of x and y.
++        int: The sum of a, b, and c.
 +    """
-+    return x + y
- 
--My_Function( 10,20 )
--
--
--
--
-+result = my_function(10, 20)
-+print(result)
++    sum_ab = a + b
++    sum_bc = b + c
++    if sum_ab == sum_bc:
++        print("equals")
++    else:
++        print("not equals")
++    return sum_ab + sum_bc
+```
+
+### File: src/bad_pep8_file2.py
+```diff
+--- legacy_src/bad_pep8_file2.py
++++ fixed_src/bad_pep8_file2.py
+@@ -1,4 +1,11 @@
+-def anotherBAD_function():
+- x= [ 1,2 ,3]
+- for i in x: print(i)
+- return x
++from conf_file import NUMBERS
++
++def another_bad_function() -> list[int]:
++    """
++    Returns a list of numbers.
++    
++    Returns:
++        list[int]: A list of numbers.
++    """
++    numbers = NUMBERS
++    return [i for i in numbers]
 ```
 
 --------------------------------------------------
 AUTO FIX GENERATED
 --------------------------------------------------
 
-### File: src/bad_code3.py
+### File: src/bad_pep8_file1.py
 ```python
-def do_something_bad() -> int:
-    """Returns the sum of two numbers."""
-    x = 1
-    y = 2
-    return x + y
-
-result = do_something_bad()
-print(result)
-```
-
-### File: src/test_pep8.py
-```python
-def my_function(x: int, y: int) -> int:
+def calculate_and_compare(a: int, b: int, c: int) -> int:
     """
-    Returns the sum of two numbers.
+    Adds a and b, then compares the result to b + c.
     
     Args:
-        x (int): The first number.
-        y (int): The second number.
+        a (int): The first number to add.
+        b (int): The second number to add.
+        c (int): The number to compare to.
     
     Returns:
-        int: The sum of x and y.
+        int: The sum of a, b, and c.
     """
-    return x + y
+    sum_ab = a + b
+    sum_bc = b + c
+    if sum_ab == sum_bc:
+        print("equals")
+    else:
+        print("not equals")
+    return sum_ab + sum_bc
+```
 
-result = my_function(10, 20)
-print(result)
+### File: src/bad_pep8_file2.py
+```python
+from conf_file import NUMBERS
+
+def another_bad_function() -> list[int]:
+    """
+    Returns a list of numbers.
+    
+    Returns:
+        list[int]: A list of numbers.
+    """
+    numbers = NUMBERS
+    return [i for i in numbers]
 ```
 
 --------------------------------------------------
