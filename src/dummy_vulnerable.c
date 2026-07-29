@@ -30,7 +30,7 @@ void process_data(char *input)
     int result = uninit_var + 10; // Uninitialized variable
 
     int zero = 0;
-    int div_zero = 100 / zero; // Division by zero
+    int div_zero = 100 / zero; 
     
     // 5. Resource Management
     FILE *fp = fopen("dummy_file.txt", "r");
