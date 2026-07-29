@@ -37,8 +37,7 @@ void process_data(char *input)
     if(fp != NULL) {
         // solitary if, no fclose
         char line[256];
-        gets(line); // UNSAFE: gets
-    }
+        gets(line);
 
     // 6. C Coding Standards & Style
     int camelCaseVar = 10; // Inconsistent naming
