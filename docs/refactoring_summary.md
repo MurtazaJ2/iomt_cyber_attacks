@@ -7,13 +7,10 @@ Generated automatically by the PR Review & Auto-Fix Agent.
 PR REVIEW REPORT
 ==================================================
 
-PR Number: 5
-Target Branch: test_pr_agent_2
+PR Number: 8
+Target Branch: test_c_agent_1
 Files Reviewed:
 
-✓ src/bad_pep8_file3.py
-✓ src/bad_pep8_file4.py
-✓ src/bad_pep8_file5.py
 
 --------------------------------------------------
 REPOSITORY COMPLIANCE REPORT
@@ -39,160 +36,13 @@ REPOSITORY COMPLIANCE REPORT
 --------------------------------------------------
 ISSUES FOUND
 --------------------------------------------------
-
-### File: src/bad_pep8_file3.py
-All automated tool checks passed.
-
-
-### File: src/bad_pep8_file4.py
-All automated tool checks passed.
-
-
-### File: src/bad_pep8_file5.py
-All automated tool checks passed.
-
 --------------------------------------------------
 CODE FORMAT COMPARE TO LEGACY
 --------------------------------------------------
 
-### File: src/bad_pep8_file3.py
-```diff
---- legacy_src/bad_pep8_file3.py
-+++ fixed_src/bad_pep8_file3.py
-@@ -1,7 +1,19 @@
--import os,sys, time
--def ThisIsBadCode( a,b,c):
-- x=a+b
-- y= b+ c
-- if x==y:
--  print("equals")
-- return x+y
-+def add_and_compare(a: int, b: int, c: int) -> int:
-+    """
-+    This function adds two numbers and compares the result with the sum of the other two numbers.
-+    
-+    Args:
-+        a (int): The first number.
-+        b (int): The second number.
-+        c (int): The third number.
-+    
-+    Returns:
-+        int: The sum of the three numbers.
-+    """
-+    sum_ab = a + b
-+    sum_bc = b + c
-+    if sum_ab == sum_bc:
-+        print("equals")
-+    else:
-+        pass
-+    return sum_ab + sum_bc
-```
-
-### File: src/bad_pep8_file4.py
-```diff
---- legacy_src/bad_pep8_file4.py
-+++ fixed_src/bad_pep8_file4.py
-@@ -1,4 +1,9 @@
--def anotherBAD_function():
-- x= [ 1,2 ,3]
-- for i in x: print(i)
-- return x
-+def another_bad_function() -> list[int]:
-+    """
-+    Returns a list of numbers.
-+    
-+    Returns:
-+        list[int]: A list of numbers.
-+    """
-+    numbers = [1, 2, 3]
-+    return numbers
-```
-
-### File: src/bad_pep8_file5.py
-```diff
---- legacy_src/bad_pep8_file5.py
-+++ fixed_src/bad_pep8_file5.py
-@@ -1,5 +1,15 @@
--import re , json
--def  one_more_BadCode ( a,b ):
-- if a>b:
--  return a
-- return b
-+def one_more_bad_code(a: int, b: int) -> int:
-+    """
-+    Returns the larger of two numbers.
-+
-+    Args:
-+        a (int): The first number.
-+        b (int): The second number.
-+
-+    Returns:
-+        int: The larger of the two numbers.
-+    """
-+    if a > b:
-+        return a
-+    else:
-+        return b
-```
-
 --------------------------------------------------
 AUTO FIX GENERATED
 --------------------------------------------------
-
-### File: src/bad_pep8_file3.py
-```python
-def add_and_compare(a: int, b: int, c: int) -> int:
-    """
-    This function adds two numbers and compares the result with the sum of the other two numbers.
-    
-    Args:
-        a (int): The first number.
-        b (int): The second number.
-        c (int): The third number.
-    
-    Returns:
-        int: The sum of the three numbers.
-    """
-    sum_ab = a + b
-    sum_bc = b + c
-    if sum_ab == sum_bc:
-        print("equals")
-    else:
-        pass
-    return sum_ab + sum_bc
-```
-
-### File: src/bad_pep8_file4.py
-```python
-def another_bad_function() -> list[int]:
-    """
-    Returns a list of numbers.
-    
-    Returns:
-        list[int]: A list of numbers.
-    """
-    numbers = [1, 2, 3]
-    return numbers
-```
-
-### File: src/bad_pep8_file5.py
-```python
-def one_more_bad_code(a: int, b: int) -> int:
-    """
-    Returns the larger of two numbers.
-
-    Args:
-        a (int): The first number.
-        b (int): The second number.
-
-    Returns:
-        int: The larger of the two numbers.
-    """
-    if a > b:
-        return a
-    else:
-        return b
-```
 
 --------------------------------------------------
 TEST RESULT
@@ -201,7 +51,7 @@ TEST RESULT
 platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0
 rootdir: /home/runner/work/iomt_cyber_attacks/iomt_cyber_attacks
 configfile: pyproject.toml
-plugins: langsmith-0.10.2, anyio-4.14.2
+plugins: anyio-4.14.2, langsmith-0.10.11
 collected 0 items
 
 ============================ no tests ran in 0.03s =============================
