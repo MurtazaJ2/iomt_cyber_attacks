@@ -1,9 +1,9 @@
 {
   "github_repo_url": "https://github.com/MurtazaJ2/iomt_cyber_attacks",
   "github_token": "",
-  "branch_name": "test_c_agent_new",
-  "commit_id": "c386c55e6454b586e6390d3bb29032efe6bdb981",
-  "pr_number": 17,
+  "branch_name": "dummy-branch",
+  "commit_id": "12d05d20e13a693a4af181839909ebe843500f9b",
+  "pr_number": 18,
   "repo_path": ".",
   "scan_mode": "last_commit",
   "exclude_dirs": ["venv", ".venv", ".git", "__pycache__", ".pytest_cache", ".ruff_cache", "agent"],
