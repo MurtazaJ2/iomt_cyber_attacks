@@ -11,8 +11,7 @@ PR Number: 18
 Target Branch: dummy-branch
 Files Reviewed:
 
-✓ dummy_python.py
-✓ src/bad_pep8.py
+✓ src/packet_sniffer.c
 
 --------------------------------------------------
 REPOSITORY COMPLIANCE REPORT
@@ -39,59 +38,38 @@ REPOSITORY COMPLIANCE REPORT
 ISSUES FOUND
 --------------------------------------------------
 
-### File: dummy_python.py
-All automated tool checks passed.
-
-
-### File: src/bad_pep8.py
+### File: src/packet_sniffer.c
 No issues found.
 
 --------------------------------------------------
 CODE FORMAT COMPARE TO LEGACY
 --------------------------------------------------
 
-### File: dummy_python.py
+### File: src/packet_sniffer.c
 ```diff
-No differences found between legacy and fixed code for dummy_python.py.
-```
-
-### File: src/bad_pep8.py
-```diff
-No differences found between legacy and fixed code for src/bad_pep8.py.
+No differences found between legacy and fixed code for src/packet_sniffer.c.
 ```
 
 --------------------------------------------------
 AUTO FIX GENERATED
 --------------------------------------------------
 
-### File: dummy_python.py
+### File: src/packet_sniffer.c
 ```python
-def dummy_function():
-    print("This is a dummy Python file.")
+#include <stdio.h>
+#include <stdlib.h>
 
-if __name__ == "__main__":
-    dummy_function()
+void start_packet_sniffer() {
+    printf("Initializing packet sniffer...\n");
+    // Sniffing logic would go here
+    printf("Packet sniffer is now running on interface eth0.\n");
+}
 
-```
-
-### File: src/bad_pep8.py
-```python
-import os, sys,time
-
-def MyBadFunction( a,b,   c ):
-  x=10
-  if x== 10: print('hello')
-  return a+ b +c
-
-class my_class :
-    def __init__(self,name):self.name=name
-    def doSomething( self ):
-     for i in range(10):
-        print( self.name )
-
-myObj = my_class( "Test" )
-myObj.doSomething()
-MyBadFunction(1, 2,3)
+int main() {
+    printf("IoMT Cyber Attacks - Network Monitor\n");
+    start_packet_sniffer();
+    return 0;
+}
 
 ```
 
